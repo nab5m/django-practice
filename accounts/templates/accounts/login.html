@@ -41,12 +41,12 @@
         <a href="{% url 'account_logout' %}">로그아웃</a> <br/>
         {{ user.username }}님이 로그인 중
     {% else %}
-        <button class="form-control kakao-login">
-            <a href="{% provider_login_url 'kakao' %}">카카오 로그인</a>
-        </button>
-        <button class="form-control naver-login">
-            <a href="{% provider_login_url 'naver' %}">네이버 로그인</a>
-        </button>
+        <a href="{% provider_login_url 'kakao' %}" class="form-control kakao-login">
+            <button>카카오 로그인</button>
+        </a>
+        <a href="{% provider_login_url 'naver' %}" class="form-control naver-login">
+            <button>네이버 로그인</button>
+        </a>
 
         <a href="/accounts/signup" class="mr-2">회원가입</a>
         <a href="/accounts/signup">비밀번호 찾기</a> <br/>

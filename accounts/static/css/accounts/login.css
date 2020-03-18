@@ -1,0 +1,24 @@
+#login-form {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+button {
+    margin-bottom: 10px;
+}
+
+button a {
+    color: #333333;
+}
+
+.form-field {
+    margin-bottom: 15px;
+}
+
+.kakao-login {
+    background-color: #f7e317;
+}
+
+.naver-login {
+    background-color: #00c73c;
+}

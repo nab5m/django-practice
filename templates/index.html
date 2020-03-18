@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <header>
+        <nav class="navbar navbar-expand-sm bg-light">
+            <h1 class="navbar-brand">Django example</h1>
+            <!-- Links -->
+            <ul class="navbar-nav ml-auto">
+                {% if not user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'local_accounts:login' %}">로그인</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">회원가입</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">마이페이지</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_logout' %}">로그아웃</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+{% endblock %}
